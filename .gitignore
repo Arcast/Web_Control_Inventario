@@ -1,52 +1,53 @@
-# Prerequisites
-*.d
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Mono Auto Generated Files
+mono_crash.*
 
-# Precompiled Headers
-*.gch
-*.pch
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# Folder config file
+Desktop.ini
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# VS Code settings
+.vscode/
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Configuration files
+#appsettings*.json
+
+# Application Insights
+ApplicationInsights.config
+
+# Entity Framework Core
+Migrations/
+
+# IIS files
+[Ii][Nn][Ee][Tt][Pp][Uu][Bb]/
+
+#
+WA_ControlInventario/.vs/Inventario_Api/FileContentIndex/
+WA_ControlInventario/.vs/Inventario_Api/v17/
+WA_ControlInventario/.vs/ProjectEvaluation/

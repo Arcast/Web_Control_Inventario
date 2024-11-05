@@ -1,0 +1,54 @@
+﻿@model List<WA_ControlInventario.Models.BodegaDTO>
+
+@{
+    ViewBag.Title = "MostrarBodega";
+}
+
+<h2>Lista de Bodegas</h2>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                @*<th>Id Bodega</th>*@
+                <th>Código</th>
+                <th>Nombre de la Bodega</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bodega in Model)
+            {
+                <tr>
+                    @*<td>@bodega.BodegaId</td>*@
+                    <td>@bodega.Codigo</td>
+                    <td>@bodega.Nombre</td>
+                    @*<td>@bodega.Estado</td>*@
+                    <td>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   role="switch"
+                                   id="flexSwitchCheckChecked-@bodega.BodegaId"
+                                   @(bodega.Estado ? "checked" : "")
+                                   disabled>       
+                            <label class="form-check-label"
+                                   for="flexSwitchCheckChecked-@bodega.Estado">
+                                    @(bodega.Estado ? "Activo" : "Inactivo")
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
+
+<div>
+    @Html.ActionLink("Regresar", "Index", "Home", null, new { @class = "btn btn-outline-secondary" })
+</div>

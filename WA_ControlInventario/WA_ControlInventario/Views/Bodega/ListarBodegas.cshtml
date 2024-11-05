@@ -1,0 +1,33 @@
+﻿@model List<WA_ControlInventario.Models.BodegaDTO>
+
+<h2>Lista de Bodegas</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="display: none;">ID</th>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th style="display: none;">Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bodega in Model)
+        {
+            <tr>
+                <td style="display: none;">@bodega.BodegaId</td>
+                <td>@bodega.Codigo</td>
+                <td>@bodega.Nombre</td>
+                <td style="display: none;">@bodega.Estado</td>
+                <td>
+                    <a href="@Url.Action("EditarBodega", "Bodega", new { id = bodega.BodegaId })" class="btn btn-success">Editar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Regresar", "Index", "Home", null, new { @class = "btn btn-outline-secondary" })
+</div>
